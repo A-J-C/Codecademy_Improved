@@ -19,12 +19,13 @@ To contribute please do the following:
 - Create a new branch titled with your `username__nextReleaseNumbe`r (i.e. `alexjc_0.2`)
 - Add any resources to `/resources`
 - Pick your appropriate folder out of `/catalog`, `/learn`, `/lesson`,`/profiles page`
-- Either (if they are small changes):
+- **Either** (if they are small changes):
     - Create a new appropriately named function in `main.js` and call it from the main `XXXUpdater` function
     - Add changes to `main.css` with appropriate comments as to what it changes 
-- Or (if it is a large change):
+- **Or** (if it is a large change):
     - Create a new file `featureName.js` under the correct folder
     - Create a new file `featureName.css` under the correct folder
+    - Add your files to the relevant `content-script` in the `manifest.json`
  - When you are happy with your new feature create a pull request into the branch `development_VersionNumber`
  - Once enough features have been added `development_VersionNumber` will be merged into `master` and a new extension created
  - When a new version is ready to be released the code will be minimised and released
@@ -38,3 +39,15 @@ To contribute please do the following:
  [Trello Board](https://trello.com/b/oEDfltUo/codecademy-extension)
  
  [Codecademy](https://www.codecademy.com/learn)
+ 
+ ## Quick Set Up
+ 
+ 1) Clone this repo into a folder on your computer
+ 2) Open Chrome 
+ 3) Go to Extensions
+ 4) Toggle Developer Mode
+ 5) Click load unpacked extension
+ 6) Select the folder you cloned into
+ 7) Follow Contributing steps
+ 8) Click the refresh wheel under extensions
+ 9) See your changes take effect

@@ -5,7 +5,7 @@
 
   "name": "Codecademy Improved",
   "description": "Extension designed to correct some annoying bugs with the CC site, and add other improvements",
-  "version": "7.1.3",
+  "version": "0.0",
 
   "icons": {
     "16": "resources/icon16.png",
@@ -15,24 +15,34 @@
 
   "permissions": [],
 
-  "content_scripts": [{
-    "run_at": "document_end",
-    "all_frames": true,
-    "js": ["essentials.js", "siteUpdater.js"],
-    "css": ["siteUpdater.css"],
-    "matches": ["*://codecademy.com/*", "*://www.codecademy.com/*"]
-  },
-  {
-    "run_at": "document_end",
-    "all_frames": true,
-    "js": ["essentials.js", "forumUpdater.js"],
-    "css": ["forumUpdater.css"],
-    "matches": ["*://discuss.codecademy.com/*"]
-  },
-  {
-    "run_at": "document_end",
-    "all_frames": true,
-    "js": ["admin.js"],
-    "matches": ["*://discuss.codecademy.com/admin"]
-  }]
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "all_frames": true,
+      "js": ["resources/jquery-3.4.1.min.js","catalog/main.js"],
+      "css": ["catalog/main.css"],
+      "matches": ["*://codecademy.com/catalog*", "*://www.codecademy.com/catalog*"]
+    },
+    {
+      "run_at": "document_end",
+      "all_frames": true,
+      "js": ["resources/jquery-3.4.1.min.js","learn/main.js"],
+      "css": ["learn/main.css"],
+      "matches": ["*://codecademy.com/learn*", "*://www.codecademy.com/learn*"]
+    },
+    {
+      "run_at": "document_end",
+      "all_frames": true,
+      "js": ["resources/jquery-3.4.1.min.js","lesson/main.js"],
+      "css": ["lesson/main.css"],
+      "matches": ["*://codecademy.com/paths*", "*://www.codecademy.com/paths*", "*://codecademy.com/courses*", "*://www.codecademy.com/courses*"]
+    },
+    {
+      "run_at": "document_end",
+      "all_frames": true,
+      "js": ["resources/jquery-3.4.1.min.js","profiles/main.js"],
+      "css": ["profiles/main.css"],
+      "matches": ["*://codecademy.com/profiles*", "*://www.codecademy.com/profiles*"]
+    }
+  ]
 }

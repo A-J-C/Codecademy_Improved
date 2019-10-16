@@ -31,7 +31,7 @@ To contribute please do the following:
  - Once enough features have been added `development_VersionNumber` will be merged into `master` and a new extension created
  - When a new version is ready to be released the code will be minimised and released
  
- ## Chrome Extensions
+ ## Quick Links
  
  [The Extension]()
  

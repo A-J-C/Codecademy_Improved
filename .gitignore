@@ -1,0 +1,8 @@
+# Intellij
+.idea/
+
+# npm
+node_modules/
+
+# extension
+Codecademy_Improved.zip

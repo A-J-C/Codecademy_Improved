@@ -1,2 +1,6 @@
 # Intellij
 .idea/
+
+# npm
+node_modules/
+profiles/

@@ -49,6 +49,15 @@ To contribute please do the following:
  4) Toggle Developer Mode
  5) Click load unpacked extension
  6) Select the folder you cloned into
- 7) Follow Contributing steps
- 8) Click the refresh wheel under extensions
- 9) See your changes take effect
+ 7) Check it works by going [here](https://www.codecademy.com/learn) and looking for a link to `Codecademy_Improved Extension` at the bottom
+ 8) Follow Contributing steps
+ 9) Click the refresh wheel under extensions
+ 10) See your changes take effect
+
+## Releasing a Extension
+
+1) Ensure everything you want is pulled into `development_VersionNumber`
+2) Ensure you have `npm` and `node` on your computer
+3) Ensure the `manifest.json` has an updated version number.
+4) Run `create.sh` - this will create a minified folder and then zip it
+5) Upload the minified and zipped file to the `Chrome Developer Dashboard`

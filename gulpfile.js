@@ -1,52 +1,39 @@
 'use strict';
 
-var autoprefixer = require('gulp-autoprefixer');
-var csso = require('gulp-csso');
-var del = require('del');
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
+const del = require('del');
+const autoprefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
+const gulp = require('gulp');
+const uglifyes = require('uglify-es');
+const composer = require('gulp-uglify/composer');
+const uglify = composer(uglifyes, composer);
+const zip = require('gulp-zip');
 
-// Set the browser that you want to support
-const AUTOPREFIXER_BROWSERS = [
-    'ie >= 10',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
-];
+gulp.task('clean', () => del(['minified']));
 
-// loop over all interesting folders
-// for(let folder in ["catalog", "learn", "lesson", "profiles", "resources"]) {
-//     // Gulp task to minify CSS files
-//     gulp.task('styles', function () {
-//         return gulp.src('./'+folder+'/*.css')
-//         // Auto-prefix css styles for cross browser compatibility
-//             .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
-//             // Minify the file
-//             .pipe(csso())
-//             // Output
-//             .pipe(gulp.dest('./mini/'+folder))
-//     });
-//
-//     // Gulp task to minify JavaScript files
-//     gulp.task('scripts', function() {
-//         return gulp.src('./'+folder+'/*.js')
-//         // Minify the file
-//             .pipe(uglify())
-//             // Output
-//             .pipe(gulp.dest('./mini/'+folder))
-//     });
-// }
-
-gulp.task('scripts', function() {
-    return gulp.src('./**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./mini/'))
+gulp.task('styles', function () {
+    return gulp.src('./@(catalog|learn|lesson|profiles)/*.css')
+        .pipe(autoprefixer())
+        .pipe(csso())
+        .pipe(gulp.dest('./minified'))
 });
+
+gulp.task('scripts', function () {
+    return gulp.src('./@(catalog|learn|lesson|profiles)/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./minified'))
+});
+
+gulp.task('copy', function () {
+    return gulp.src(['./@(resources)/*', './LICENSE', './manifest.json'])
+        .pipe(gulp.dest('./minified'))
+});
+
+gulp.task('zip', function () {
+    return gulp.src('./minified/**')
+        .pipe(zip('Codecademy_Improved.zip'))
+        .pipe(gulp.dest('./'))
+});
+
+gulp.task('default', gulp.series('clean', 'copy', 'styles', 'scripts', 'zip', 'clean'));
+

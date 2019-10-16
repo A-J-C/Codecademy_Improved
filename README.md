@@ -59,5 +59,5 @@ To contribute please do the following:
 1) Ensure everything you want is pulled into `development_VersionNumber`
 2) Ensure you have `npm` and `node` on your computer
 3) Ensure the `manifest.json` has an updated version number.
-4) Run `create.sh` - this will create a minified folder and then zip it
-5) Upload the minified and zipped file to the `Chrome Developer Dashboard`
+4) Run `npm start` - this will create a minified folder, zip it and delete the original folder, using `gulp`
+5) Upload zip file to the `Chrome Developer Dashboard`

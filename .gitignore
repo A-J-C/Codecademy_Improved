@@ -3,4 +3,6 @@
 
 # npm
 node_modules/
-profiles/
+
+# extension
+Codecademy_Improved.zip

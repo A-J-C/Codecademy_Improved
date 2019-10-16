@@ -5,7 +5,7 @@
 
   "name": "Codecademy Improved",
   "description": "Extension designed to correct some annoying bugs with the CC site, and add other improvements",
-  "version": "0.0",
+  "version": "0.0.1",
 
   "icons": {
     "16": "resources/icon16.png",

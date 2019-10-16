@@ -33,7 +33,7 @@ To contribute please do the following:
  
  ## Quick Links
  
- [The Extension]()
+ [The Extension](https://chrome.google.com/webstore/detail/codecademy-improved/dbkmccgeodbcnhdeahjhjiobnfgffdmd)
  
  [Google Developer Guide](https://developer.chrome.com/extensions/getstarted)
  

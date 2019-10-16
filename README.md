@@ -2,7 +2,7 @@
 
 ## Version History
 - `0.1` Release - Initial set up
-- `0.2` Next release
+- `1.0` Next release - see [**Milestone V1**](https://github.com/A-J-C/Codecademy_Improved/milestones)
 
 ## Features
 
@@ -16,7 +16,8 @@ Enjoy the improvements, we plan on adding many more :)
 
 To contribute please do the following:
 
-- Create a new branch titled with your `username__nextReleaseNumbe`r (i.e. `alexjc_0.2`)
+- Pick an issue from the [**Project Board**](https://github.com/A-J-C/Codecademy_Improved/projects/1)
+- Create a new feature branch titled with your `username__issueNumber` (i.e. `a-j-c_#1`)
 - Add any resources to `/resources`
 - Pick your appropriate folder out of `/catalog`, `/learn`, `/lesson`,`/profiles page`
 - **Either** (if they are small changes):
@@ -36,7 +37,7 @@ To contribute please do the following:
  
  [Google Developer Guide](https://developer.chrome.com/extensions/getstarted)
  
- [Trello Board](https://trello.com/b/oEDfltUo/codecademy-extension)
+ [Project Board](https://github.com/A-J-C/Codecademy_Improved/projects/1)
  
  [Codecademy](https://www.codecademy.com/learn)
  
